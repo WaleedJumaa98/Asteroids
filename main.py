@@ -1,5 +1,3 @@
-import ast
-
 import pygame
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
@@ -49,7 +47,7 @@ def main():
             for shot in shots:
                 if obj.collides_with(shot):
                     log_event("asteroid_shot")
-                    obj.kill()
+                    obj.split()
                     shot.kill()
 
         screen.fill("black")
